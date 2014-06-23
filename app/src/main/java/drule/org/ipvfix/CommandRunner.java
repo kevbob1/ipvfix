@@ -7,11 +7,22 @@ import android.util.Log;
  */
 public class CommandRunner {
 
+
+
+
     public boolean changeMTU(String interface, int mtu) {
 
         try{
+            StringBuilder cmd = new StringBuilder();
+            cmd.append("ifconfig ");
+            cmd.append(interface);
+            cmd.append(" mtu ");
+            cmd.append(Integer.toString(mtu));
+            cmd.append('\n');
+            
             Process su = Runtime.getRuntime().exec("su");
             DataOutputStream outputStream = new DataOutputStream(su.getOutputStream());
+
 
             outputStream.writeBytes("screenrecord --time-limit 10 /sdcard/MyVideo.mp4\n");
             outputStream.flush();
