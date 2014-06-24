@@ -4,5 +4,8 @@
     <string name="app_name">IPvFix</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="superuser">Superuser</string>
+    <string name="superuser_description">full permissions to all device features and storage</string>
+    <string name="superuser_description_more">Superuser grants full access to all device features and storage, including the secure and sensitive hardware elements of your device. This permission is potentially dangerous.</string>
 
 </resources>
