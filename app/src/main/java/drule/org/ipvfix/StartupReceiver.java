@@ -8,11 +8,10 @@ import android.content.Intent;
  * Created by kev on 6/23/14.
  */
 public class StartupReceiver extends BroadcastReceiver {
-
-
     @Override
     public void onReceive(Context context, Intent intent) {
-
+        AsyncCommandRunner task = new AsyncCommandRunner(context);
+        task.execute(new CommandRunner.MtuSetter("wlan0", 1472));
     }
 
 
